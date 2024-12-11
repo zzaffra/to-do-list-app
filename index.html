@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+    <title>Todo</title>
+  </head>
+  <body>
+    <section class="todo">
+      <h2>To-do list</h2>
+      <div class="input">
+        <!-- Remove input field, add button will trigger popup -->
+        <button class="btn" id="addTaskBtn">Add Task</button>
+      </div>
+
+      <ul class="scroll">
+        <!-- Task list will be dynamically added here -->
+         <li id="todoList"></li>
+      </ul>
+
+      <div>
+        <hr class="counter" />
+        <div class="counter-container">
+          <p><span id="todoCount">0</span> items total</p>
+          <button id="deleteButton">Delete All</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pop-up Form -->
+    <div id="taskPopup" class="popup">
+      <div class="popup-content">
+        <span class="close" id="closePopup">&times;</span>
+        <h3>Add a New Task</h3>
+        <form id="taskForm">
+          <label for="taskName">Task Name</label>
+          <input type="text" id="taskName" required />
+          
+          <label for="taskDescription">Description</label>
+          <textarea id="taskDescription" required></textarea>
+
+          <label for="taskDueDate">Due Date</label>
+          <input type="date" id="taskDueDate" required />
+          <div class="button-container">
+            <button type="submit" class="button-submit">Add Task</button>
+            <button type="button" id="cancelButton" class="button-cancel">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer">
+        <p class="made-by">Made By</p>
+        <p class="author">Nadine Zafi</p>
+      </div>
+    </footer>
+  </body>
+</html>
+

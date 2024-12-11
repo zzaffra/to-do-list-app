@@ -1,0 +1,215 @@
+
+:root {
+  --gradient: linear-gradient(180deg, rgba(45, 112, 1253, 0.73) 0%, #163e92 100%);
+  --dark: #001747;
+  --grey: #b1bacb;
+  --grey-border: rgba(210, 210, 210, 0.75);
+  --grey-light: #eeeeee;
+  --grey-dark: #405175;
+  --blue: #2d70fd;
+  --green: #00d8a7;
+  --white: #ffffff;
+}
+
+body {
+  background: var(--gradient);
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.todo {
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  background-color: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  color: var(--dark);
+}
+
+.input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn {
+  color: var(--white);
+  font-size: 1.1rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: 0.3rem;
+  background-color: var(--blue);
+  border: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.scroll {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: var(--grey-light);
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.task:hover {
+  background-color: var(--grey);
+}
+
+input[type="checkbox"] {
+  margin-right: 15px;
+}
+
+.task-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--dark);
+  cursor: pointer;
+}
+
+.counter-container {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.counter-container button {
+  padding: 0.5rem 1rem;
+  background-color: var(--green);
+  border: none;
+  color: var(--white);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  width: 300px;
+}
+
+.popup .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+footer {
+  margin-top: auto;
+  text-align: center;
+  color: var(--white);
+}
+
+.task-checkbox {
+  margin-right: 10px;
+}
+
+/* Add styles for the pop-up */
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-top: 10px;
+}
+
+form input, form textarea {
+  margin-bottom: 10px;
+  padding: 8px;
+}
+
+form button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+form button:hover {
+  background-color: #45a049;
+}
+
+#cancelButton {
+  background-color: #f44336; /* Red color for the cancel button */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px; 
+}
+
+#cancelButton:hover {
+  background-color: #e32f2f;
+}
+
+/* Style for the task list item */
+.task-item {
+  display: flex;
+  align-items: center; 
+  justify-content: space-between; 
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Style for task content */
+.task-content {
+  flex-grow: 1; /* Make the content take the remaining space */
+}
+
+/* Style for the Edit button */
+.edit-button {
+  background-color: #ccc;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+/* Hover effect for the Edit button */
+.edit-button:hover {
+  background-color: #ccc;
+}
+
